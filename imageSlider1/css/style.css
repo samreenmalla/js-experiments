@@ -1,0 +1,87 @@
+.container-wrapper{
+	overflow: hidden;
+	width: 500px;
+}
+
+.image-container{
+	width: 500px;
+	background-color: grey;
+	position: relative;
+}
+.image-list{
+	width: 2000px;
+	transition: 0.25s ease-out;
+}
+.image-list li{
+	list-style-type:none;
+	float:left;
+	/* position: absolute; */
+	top: 20px;
+	left: 20px;
+}
+ img{
+	width: 500px;
+ }
+.position-dots{
+	margin-left: 40%;
+}
+.dotarray{
+	display: inline-block;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 5px;
+	margin-left: 50px;
+}
+	.dot{
+		margin: 2.5px;
+		background-color: white;
+		border-radius: 100000px;
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		opacity: 0.3;
+	}
+	.dot.active{
+		opacity: 1;
+	}
+	.dot.hover{
+		opacity: 0.65;
+	}
+
+ .next::after,
+ .prev::after{
+		content: ">";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		background-color: white;
+		height: 3em;
+		width: 1em;
+		font-weight: bold;
+		font-family: 'sans-serif';
+		transform: translateY(-50%);
+		padding: 0 0.2em;
+		line-height: 3em;
+		opacity: 0.3;
+		transition: opacity 0.2s linear;
+ }
+
+ .prev::after{
+	 content: "<";
+	 left: 0;
+ }
+
+ .next:hover::after,
+ .prev:hover::after{
+	 opacity: 1;
+ }
+
+ .clear::before,
+ .clear::after{
+	 content: "";
+	 display: table;
+	 clear: both;
+ }
